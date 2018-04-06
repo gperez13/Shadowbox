@@ -1,0 +1,94 @@
+/* Add Styles Here */
+
+#services{
+
+}
+
+#biography{
+	margin: 3rem;
+}
+
+
+#offerings{
+	background-color: #DDDDDD;
+	margin: 1px;
+	padding-bottom: 1rem;
+}
+
+
+h2{
+	padding: 3rem 1rem 2rem 1rem;
+	font-family: Raleway;
+	font-style: bold;
+}
+
+h3{
+	font-weight: bold;
+	text-align: center;
+	padding-top: 2rem;
+}
+
+span{
+
+	padding-top: 1rem;
+	
+
+}
+
+p{
+	text-align: left;
+	padding: 1rem 1rem 2rem 1rem;
+
+
+}
+
+#lefty{
+	float: left;
+}
+
+#righty{
+	float: right;
+
+}
+
+img{
+	height: 400px;
+	width: 300px;
+}
+
+#bio-image{
+	background-image: url('../images/biography.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 14% 0 23% 0;
+	position: relative;
+	background-size: cover;
+
+
+}
+
+#quote{
+	text-align: center;
+	font-size: 2rem;
+	font-family: Merriweather;
+	font-style: italic;
+	padding-bottom: 6rem;
+}
+
+#quote img{
+	height: 4rem;
+	width: 4rem;
+	margin: 2rem;
+}
+
+.fa{
+
+    color: black;
+    text-decoration: none;
+}
+
+a{
+
+    color: black;
+    text-decoration: none;
+}

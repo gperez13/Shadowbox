@@ -11,6 +11,9 @@ class App extends Component {
   };
 
 
+  speak = () => {
+    return 'It is I, Aladdin'
+  };
 
 
 
@@ -34,5 +37,7 @@ class App extends Component {
 }
 
 export default App;
+
+console.log(App)
 
 

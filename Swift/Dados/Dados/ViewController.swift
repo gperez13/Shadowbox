@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox.AudioServices
 
 class ViewController: UIViewController {
     
@@ -45,6 +46,15 @@ class ViewController: UIViewController {
         diceImageView2.image = UIImage(named: diceArray[randomDiceIndex2])
         
         
+    }
+    
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+       AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+        print("should have worked")
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        randomizeDieImages()
     }
 }
 

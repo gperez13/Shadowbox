@@ -37,6 +37,11 @@ class ViewController: UIViewController {
         answerQuestion()
     }
     
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        answerQuestion()
+    }
+    
+    
 
 }
 

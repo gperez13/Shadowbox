@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox.AudioServices
 
 class ViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        answerQuestion()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -38,6 +40,11 @@ class ViewController: UIViewController {
     }
     
     override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        AudioServicesPlayAlertSound(kSystemSoundID_Vibrate)
+      
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         answerQuestion()
     }
     

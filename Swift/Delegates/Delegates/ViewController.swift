@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CanReceive {
+    
 
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var label: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +30,23 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "secondScreenNavigation" {
-            let destinationVC = segue.destination as! SecondViewController
-            destinationVC.recievedText = textField.text!
+            let secondVC = segue.destination as! SecondViewController
+            
+            secondVC.data = textField.text!
+            secondVC.delegate = self
+            
         }
     }
+    
+    @IBAction func changeColor(_ sender: Any) {
+        view.backgroundColor = UIColor.cyan
+    }
+    
+    
+    func dataReceived(data: String) {
+        label.text = data
+    }
+    
     
 }
 

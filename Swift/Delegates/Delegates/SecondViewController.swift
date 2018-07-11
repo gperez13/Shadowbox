@@ -8,14 +8,21 @@
 
 import UIKit
 
+protocol CanReceive {
+    func dataReceived(data: String)
+}
+
 class SecondViewController: UIViewController {
     
-    var recievedText : String? 
+    var delegate : CanReceive?
+    var data = ""
 
+    @IBOutlet weak var textField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        secondLabel.text = recievedText
+        secondLabel.text = data
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +31,11 @@ class SecondViewController: UIViewController {
     }
     
     @IBOutlet weak var secondLabel: UILabel!
+    
+    @IBAction func sendDataBack(_ sender: Any) {
+        delegate?.dataReceived(data: textField.text!)
+        dismiss(animated: true, completion: nil)
+    }
     
     /*
     // MARK: - Navigation

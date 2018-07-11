@@ -25,13 +25,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ls-w4-5Tw">
-                                <rect key="frame" x="80" y="265" width="214" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoE-PG-l50">
                                 <rect key="frame" x="140" y="410" width="95" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -44,11 +37,27 @@
                                     <segue destination="vQU-Qo-rLe" kind="show" identifier="secondScreenNavigation" id="irm-xW-PJS"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ls-w4-5Tw">
+                                <rect key="frame" x="80" y="265" width="214" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2p-gk-zA4">
+                                <rect key="frame" x="135" y="470" width="100" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="💩"/>
+                                <connections>
+                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4L6-Gj-WMY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.71965369389268385" green="1" blue="0.70073854177681527" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="label" destination="zt2-bq-8Pi" id="EVQ-ez-e1a"/>
                         <outlet property="textField" destination="1Ls-w4-5Tw" id="mbI-qR-Tdu"/>
                     </connections>
                 </viewController>
@@ -85,6 +94,9 @@
                                 <state key="normal" title="Gatruiii">
                                     <color key="titleColor" red="0.34950798267093403" green="0.33883938889544746" blue="0.57121177855786809" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendDataBack:" destination="vQU-Qo-rLe" eventType="touchUpInside" id="bko-79-fm2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.66973275853991665" blue="0.51246786185788251" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -92,6 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="secondLabel" destination="Tl0-h9-hbP" id="zXD-LV-1kp"/>
+                        <outlet property="textField" destination="67D-Nn-BPT" id="sDE-ak-IfX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YC-wh-ibM" userLabel="First Responder" sceneMemberID="firstResponder"/>
